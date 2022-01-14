@@ -23,7 +23,7 @@ For this course, our primary environment is Visual Studio Code. Download the lat
 ## Connecting Your CSE ieng6 Account in VScode
 Open VScode. The interface may look slightly different depending on the version and operating system, but the functionality should remain the same. Open up a new terminal by navigating to Terminal > New Terminal.
 
-![Image](report1-2.PNG)
+![Image](report1-2.png)
 
 In the terminal, enter the following command, replacing your username in the placeholder:
 >ssh yourusername@ieng6.ucsd.edu
@@ -35,7 +35,7 @@ When you run this command, you'll get a message telling you that the authenticit
 Notice that the text before your cursor in the terminal now displays [yourusername@ieng6-xyz]. This means that you are now connected remotely to the CSE server. Now, any commands that you run in the terminal won't run on your local machine, but rather on the machine that hosts the server that you are connected to. If you want to log out of the remote connection, press Ctrl+D, or enter the following command:
 >exit
 
-![Image](report1-4.PNG)
+![Image](report1-4.png)
 The terminal should then confirm that your connection to the remote server has been closed.
 
 ## Basic Remote Operations
@@ -48,19 +48,19 @@ cd
 
 `ls` lists all of the files in your current directory. In this case, the files `WhereAmI.class` and `WhereAmI.class`, and the folders `perl5` and `week1` are in the home directory of the remote computer.
 
-![Image](report1-5.PNG)
+![Image](report1-5.png)
 
 `pwd` prints the working directory. In this case, the working directory is `/home/linux/ieng6/cs15lwi22/cs15lwi22atz`. Notice that because a remote connection is established, this is the working directory of the remote computer, rather than the directory of the local machine.
 
-![Image](report1-6.PNG)
+![Image](report1-6.png)
 
 `mkdir` creates a folder in the current working directory. For example, calling `mkdir examplefolder` in the home directory creates a folder called `examplefolder` in the home directory. If we call `ls` again, `examplefolder` will be listed alongside the previously existing files.
 
-![Image](report1-7.PNG)
+![Image](report1-7.png)
 
 `cd` navigates to a specific directory by following a path from your current working directory. From the previous example, `cd examplefolder` while will navigate the working directory to `currentdirectory/examplefolder`, where `currentdirectory` is a placeholder for your working directory. `cd ..` will navigate to the parent directory of your current directory, and `cd ~` will navigate to your home directory.
 
-![Image](report1-8.PNG)
+![Image](report1-8.png)
 
 ## Moving Files With SCP
 You can use SCP command to copy files from your local machine to the remote machine. For example, in order to transfer the file HelloWorld.java from your local machine to the remote server, run the following command, and enter your password when prompted:
@@ -68,7 +68,7 @@ You can use SCP command to copy files from your local machine to the remote mach
 
 Notice that this command is being run on the local machine, not through a remote connection, and that HelloWorld.java is in the same directory as the current working directory of the terminal.
 
-![Image](report1-9.PNG)
+![Image](report1-9.png)
 
 Logging back into the remote server and listing out the file contents following the file copy will then display `HelloWorld.java` as a file in the remote server.
 
