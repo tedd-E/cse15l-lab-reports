@@ -1,6 +1,6 @@
 # CSE15L Lab Report 1
-Written by Kai Lee
-<br></br>
+Written by Kai Lee  
+
 This report is a tutorial on how to set up a CSE ieng6 account on Visual Studio Code for UCSD students who will be taking CSE15L. In this tutorial, I will cover the following topics:
 
 - Installing Visual Studio Code
@@ -9,17 +9,16 @@ This report is a tutorial on how to set up a CSE ieng6 account on Visual Studio 
 - Moving files with scp
 - Setting an SSH key
 - Optimizing remote connecting
-<br></br>
+
 
 Prerequisites for this tutorial: 
 - Know your ieng6 login credentials.
 - [Windows users only] Have OpenSSH installed.
-<br></br>
+
 ## Installing Visual Studio Code
 For this course, our primary environment is Visual Studio Code. Download the latest version of VScode [at their website](https://code.visualstudio.com/download). Select the version that matches your operating system, and follow the setup instructions of the installer.
 
 ![Image](report1-1.PNG)
-<br></br>
 
 ## Connecting Your CSE ieng6 Account in VScode
 Open VScode. The interface may look slightly different depending on the version and operating system, but the functionality should remain the same. Open up a new terminal by navigating to Terminal > New Terminal.
