@@ -42,7 +42,7 @@ The terminal should then confirm that your connection to the remote server has b
 Here are some basic terminal commands that you can run in order to navigate through your remote directory. 
 
 >ls			    
-pwd	
+pwd  
 mkdir	   	   
 cd	   
 
