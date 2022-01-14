@@ -2,6 +2,8 @@
 ## Duck
 _sparrow_ **Eagle** _sparrow_ **Eagle** *sparrow* **Eagle** **Eagle** **Eagle** **Eagle**
 ---
+
+[Lab Report 1](lab-report-1-week-2.html)
 [Link](https://www.youtube.com/watch?v=0Haxy5PvCuk)
 
 > Leaves don't exist. 
