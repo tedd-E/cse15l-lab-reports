@@ -50,7 +50,7 @@ cd
 
 ![Image](report1-5.PNG)
 
-'pwd' prints the working directory. In this case, the working directory is `/home/linux/ieng6/cs15lwi22/cs15lwi22atz`. Notice that because a remote connection is established, this is the working directory of the remote computer, rather than the directory of the local machine.
+`pwd` prints the working directory. In this case, the working directory is `/home/linux/ieng6/cs15lwi22/cs15lwi22atz`. Notice that because a remote connection is established, this is the working directory of the remote computer, rather than the directory of the local machine.
 
 ![Image](report1-6.PNG)
 
@@ -58,7 +58,7 @@ cd
 
 ![Image](report1-7.PNG)
 
-`cd` is the command to navigate to a specific directory by following a path from your current working directory. From the previous example, `cd examplefolder` while will navigate the working directory to `currentdirectory/examplefolder`, where `currentdirectory` is a placeholder for your working directory. `cd ..` will navigate to the parent directory of your current directory, and `cd ~` will navigate to your home directory.
+`cd` navigates to a specific directory by following a path from your current working directory. From the previous example, `cd examplefolder` while will navigate the working directory to `currentdirectory/examplefolder`, where `currentdirectory` is a placeholder for your working directory. `cd ..` will navigate to the parent directory of your current directory, and `cd ~` will navigate to your home directory.
 
 ![Image](report1-8.PNG)
 
