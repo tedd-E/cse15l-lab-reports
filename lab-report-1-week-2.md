@@ -41,12 +41,10 @@ The terminal should then confirm that your connection to the remote server has b
 ## Basic Remote Operations
 Here are some basic terminal commands that you can run in order to navigate through your remote directory. 
 
-```
-ls			    
-pwd  
-mkdir	   	   
-cd	  
-``` 
+```ls```			    
+```pwd```  
+```mkdir```	   	   
+```cd``` 
 
 `ls` lists all of the files in your current directory. In this case, the files `WhereAmI.class` and `WhereAmI.class`, and the folders `perl5` and `week1` are in the home directory of the remote computer.
 
