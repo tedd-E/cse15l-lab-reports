@@ -12,7 +12,7 @@ This report is a tutorial on how to set up a CSE ieng6 account on Visual Studio 
 
 
 Prerequisites for this tutorial: 
-- Know your ieng6 login credentials.
+- Know your ieng6 login credentials (you can look up your course specific account [here](https://sdacs.ucsd.edu/~icc/index.php))
 - [Windows users only] Have OpenSSH installed.
 
 ## Installing Visual Studio Code
@@ -26,14 +26,14 @@ Open VScode. The interface may look slightly different depending on the version 
 ![Image](lab1img/report1-2.png)
 
 In the terminal, enter the following command, replacing your username in the placeholder:
->ssh yourusername@ieng6.ucsd.edu
+```ssh yourusername@ieng6.ucsd.edu```
 
 When you run this command, you'll get a message telling you that the authenticity of the host can't be established. This is normal when you are connecting remotely to a server for the first time, and type in 'yes' when it asks you if you still want to proceed. Enter your password when prompted. The terminal should then output information on the server and cluster status.
 
 ![Image](lab1img/report1-3.PNG)
 
 Notice that the text before your cursor in the terminal now displays [yourusername@ieng6-xyz]. This means that you are now connected remotely to the CSE server. Now, any commands that you run in the terminal won't run on your local machine, but rather on the machine that hosts the server that you are connected to. If you want to log out of the remote connection, press Ctrl+D, or enter the following command:
->exit
+```exit```
 
 ![Image](lab1img/report1-4.png)
 The terminal should then confirm that your connection to the remote server has been closed.
@@ -41,10 +41,12 @@ The terminal should then confirm that your connection to the remote server has b
 ## Basic Remote Operations
 Here are some basic terminal commands that you can run in order to navigate through your remote directory. 
 
->ls			    
+```
+ls			    
 pwd  
 mkdir	   	   
-cd	   
+cd	  
+``` 
 
 `ls` lists all of the files in your current directory. In this case, the files `WhereAmI.class` and `WhereAmI.class`, and the folders `perl5` and `week1` are in the home directory of the remote computer.
 
@@ -64,7 +66,7 @@ cd
 
 ## Moving Files With SCP
 You can use SCP command to copy files from your local machine to the remote machine. For example, in order to transfer the file HelloWorld.java from your local machine to the remote server, run the following command, and enter your password when prompted:
->scp HelloWorld.java yourusername@ieng6.ucsd.edu:~/
+```scp HelloWorld.java yourusername@ieng6.ucsd.edu:~/```
 
 Notice that this command is being run on the local machine, not through a remote connection, and that HelloWorld.java is in the same directory as the current working directory of the terminal.
 
@@ -83,13 +85,13 @@ It's important to note that if you already have a file with the same name in you
 ## Setting an SSH Key
 There is a convenient way to bypass typing in a password every time you want to connect to or copy files to a remote server. By setting up an SSH key, which will be shared between your local machine and the remote server, you can eliminate the need to type your password every time you establish a remote connection.  
 On your local machine, run the following command:
->ssh-keygen
+```ssh-keygen``` 
 
 Store your key in `/Users/youruser/.ssh/id_rsa`, where `youruser` is a placeholder for the username of your local machine. Then, login to your remote connection and create a .ssh directory using the following command:
->mkdir.ssh
+```mkdir.ssh```
 
 Log out of your remote connection, and copy the key from your local machine to the remote server using the following command:  
->scp /Users/youruser/.ssh/id_rsa.pub yourusername@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```scp /Users/youruser/.ssh/id_rsa.pub yourusername@ieng6.ucsd.edu:~/.ssh/authorized_keys```
 
 ![Image](lab1img/report1-12.PNG)
 
@@ -97,10 +99,13 @@ Now, try to login to your remote connection again. If you aren't prompted for a 
 
 ## Optimizing Remote Connecting
 There is an alternative way to run commands on a remote server without having to login first. With an SSH key pairing established between your local machine and remote server, it is possible to run a command from your local machine through the following command:
->ssh yourusername@ieng6.ucsd.edu "your command in quotes"
+```ssh yourusername@ieng6.ucsd.edu "your command in quotes"```
+
+For example, you can run ```ssh yourusername@ieng6.ucsd.edu javac HelloWorld.java``` to compile the java file HelloWorld on the remote machine.
+
 
 In order to run multiple operations in one single line, seperate each command with a semicolon:
->ssh yourusername@ieng6.ucsd.edu "command 1; command 2; command 3"
+```ssh yourusername@ieng6.ucsd.edu "command 1; command 2; command 3"```
 
 For example, the following command will compile and run HelloWorld.java on the remote server from the local machine in one line.
 
