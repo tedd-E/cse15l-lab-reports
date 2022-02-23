@@ -43,3 +43,5 @@ Navigate to the file you want to setup your github repository in, and enter the 
 
 You can now make changes to your repository without having to enter a username and ssh key every time you want to make any changes. In the example below, I create a markdown file called "test.md" and push it to my repository in markdown-parse. As expected, I don't have to enter a username or ssh key in order to push the changes.
 ![image](lab3img/6.PNG)
+
+Here is the [link](https://github.com/tedd-E/markdown-parse/commit/d4b335c738ed98dcf43b03481fdb22c8e6b799b4) to the resulting commit. 
